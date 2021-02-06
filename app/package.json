@@ -2,6 +2,9 @@
   "name": "base-app",
   "version": "0.1.0",
   "private": true,
+  "config": {
+    "port": "8082"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
@@ -10,6 +13,10 @@
     "@types/node": "^12.19.16",
     "@types/react": "^17.0.1",
     "@types/react-dom": "^17.0.0",
+    "axios": "^0.21.1",
+    "classnames": "^2.2.6",
+    "node-sass": "^5.0.0",
+    "ramda": "^0.27.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.2",
@@ -17,7 +24,9 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=$npm_package_config_port react-scripts start",
+    "start-prod": "serve -s build -l $npm_package_config_port",
+    "prod": "npm run build && npm run start-prod",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
