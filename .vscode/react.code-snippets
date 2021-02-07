@@ -48,5 +48,28 @@
             "export default ${1:funcname};\n"
         ],
         "description": "Boilerplate class component"
+    },
+    "SCSS Template": {
+        "scope": "scss",
+        "prefix": "scss-template,style-template",
+        "body": [
+            "@import 'styles/colors.scss';",
+            "@import 'styles/media.scss';\n",
+            "// Mobile first",
+            "// 0 - 599\n",
+            "// 600 - 899",
+            "@include tablet-portrait {\n",
+            "}\n",
+            "// 900 - 1199",
+            "@include tablet-landscape {\n",
+            "}\n",
+            "// 1200 - 1799",
+            "@include desktop {\n",
+            "}\n",
+            "// 1800+",
+            "@include big-desktop {\n",
+            "}\n",
+        ],
+        "description": "Boilerplate class component"
     }
 }
