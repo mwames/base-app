@@ -1,0 +1,25 @@
+@import 'styles/colors.scss';
+@import 'styles/media.scss';
+
+// Mobile first
+// 0 - 599
+
+// 600 - 899
+@include tablet-portrait {
+
+}
+
+// 900 - 1199
+@include tablet-landscape {
+
+}
+
+// 1200 - 1799
+@include desktop {
+
+}
+
+// 1800+
+@include big-desktop {
+
+}
